@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Валютний сортувальник</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            background-color: #f4f6f8;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0077cc;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 30px;
+        }
+
+        .panel,
+        .zone {
+            background: #fff;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 15px;
+            width: 250px;
+            min-height: 300px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .zone.active {
+            background-color: #e8f5e9;
+            border-color: #4caf50;
+        }
+
+        .currency {
+            background-color: #0077cc;
+            color: white;
+            padding: 8px 12px;
+            margin: 5px 0;
+            border-radius: 5px;
+            cursor: grab;
+            user-select: none;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Перетягни валюту до зони</h1>
+    <div class="container">
+        <div class="panel" id="start-panel">
+            <strong>Список валют:</strong>
+        </div>
+        <div class="zone" id="zone-left">
+            <strong>Кишеня</strong>
+        </div>
+        <div class="zone" id="zone-right">
+            <strong>Гаманець</strong>
+        </div>
+    </div>
+
+    <footer id="output"></footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
